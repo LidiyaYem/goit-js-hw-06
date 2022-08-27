@@ -7,7 +7,7 @@ function onInputChange(event) {
     const inputValue = event.currentTarget.value;
 
     if (inputValue.length === 0 ) {
-    return output.textContent = 'Anonimus';
+    return output.textContent = 'Anonymous';
 }
     output.textContent = inputValue;
 };

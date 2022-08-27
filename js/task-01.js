@@ -1,32 +1,21 @@
-const categEl = document.querySelector('#categories');
-// console.log(categEl);
+const categories = document.querySelector('#categories')
+const categoriesItems = categories.querySelectorAll('.item');
 
-const categItemsEl = categEl.querySelectorAll('.item');
-// console.log(categItemsEl);
-
-const amount = `Number of categories: ${categItemsEl.length}`;
-console.log(amount);
+console.log(`Number of categories: ${categoriesItems.length}`);
 
 
+categoriesItems.forEach((elem) => {
+    const categoriesItemsTitle = elem.querySelectorAll('h2');
 
-categItemsEl.forEach(function (elem) {
-    const categItemsElTitle = elem.querySelectorAll('h2');
-// console.log(categItemsElTitle);
+        categoriesItemsTitle.forEach((el) => {
+            console.log (`Category: ${el.textContent}`);
+        });
+        
+    const categoriesItemsUl = elem.querySelectorAll('ul');
 
-    categItemsElTitle.forEach(function (element) {
-        console.log(`Category: ${element.textContent}`);
-    
-});
-
-
-
-    const categTitleEl = elem.querySelectorAll('ul');
-// console.log(categTitleEl);
-
-    categTitleEl.forEach (function (element) {
-        const categTitleElAmount = element.children;
-        console.log(`Elements: ${categTitleElAmount.length}`);
+        categoriesItemsUl.forEach ((element) => {
+            const categoriesItemsUlNumber = element.children;
+            console.log(`Elements: ${categoriesItemsUlNumber.length}`);
 });
 
 });
-
