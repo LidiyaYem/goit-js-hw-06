@@ -35,4 +35,6 @@ function getRandomHexColor() {
 
 function destroyBoxes() {
   divEl.innerHTML = '';
+  boxWidth = 30; 
+  boxHeight = 30;
 }
